@@ -12,7 +12,7 @@ public class ArraySum {
             System.out.println("Было введено неправильное число");
             System.exit(0);
         }
-        int array[] = new int[lenght];
+        int[] array = new int[lenght];
         int arraySum = 0;
         System.out.println("Введите элементы целочисленного массива: ");
         for (int i = 0; i < lenght; i++){
@@ -24,7 +24,7 @@ public class ArraySum {
                 System.exit(0);
             }
         }
-        double mean = arraySum / lenght;
+        double mean = (float)arraySum / lenght;
         System.out.format("Сумма элементов целочисленного массива = %d \nСреднее арифметическое его элементов: %.3f", arraySum, mean);
 
     }
