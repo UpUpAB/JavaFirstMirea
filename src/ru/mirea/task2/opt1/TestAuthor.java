@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class TestAuthor {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        String name ="";
+        String name = "";
         String email = "";
-        char gender = '0';
+        char gender;
         System.out.println("Введите имя:");
         if (sc.hasNextLine()) {
             name = sc.nextLine();
