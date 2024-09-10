@@ -5,10 +5,22 @@ import java.util.Scanner;
 public class TestBall {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        double x=0;
+        double y=0;
         System.out.println("Введите координату х:");
-        double x = sc.nextDouble();
+        if (sc.hasNextDouble()) {
+            x = sc.nextDouble();
+        } else {
+            System.out.println("Было введено неправильное число");
+            System.exit(0);
+        }
         System.out.println("Введите координату y:");
-        double y = sc.nextDouble();
+        if (sc.hasNextDouble()) {
+            y = sc.nextDouble();
+        } else {
+            System.out.println("Было введено неправильное число");
+            System.exit(0);
+        }
         Ball test1 = new Ball(x,y);
         System.out.println(test1);
         test1.move(10,20);
