@@ -25,7 +25,8 @@ public class ArraySum {
             }
         }
         double mean = (float)arraySum / lenght;
-        System.out.format("Сумма элементов целочисленного массива = %d \nСреднее арифметическое его элементов: %.3f", arraySum, mean);
+        System.out.format("Сумма элементов целочисленного массива = %d \n" +
+                "Среднее арифметическое его элементов: %.3f", arraySum, mean);
 
     }
 }
