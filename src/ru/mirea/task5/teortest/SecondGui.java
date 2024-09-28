@@ -16,23 +16,14 @@ public class SecondGui {
         JButton button2 = new JButton("Button 2");
         panel.add(button1);
         panel.add(button2);
-//добавили панель к фрейму
-        JLabel resultLabel = new JLabel("Result: 0 X 0", JLabel.CENTER);
+        JOptionPane.showMessageDialog(null, panel);
 
-        // Метка "Last Scorer"
-        JLabel lastScorerLabel = new JLabel("Last Scorer: N/A",JLabel.CENTER);
-
-        // Метка "Winner"
-        JLabel winnerLabel = new JLabel("Winner: DRAW",JLabel.CENTER);
-//упакуем во фрейм
 
 
         frame.getContentPane().add(panel);
-        frame.add(resultLabel);
-        frame.add(lastScorerLabel);
-        frame.add(winnerLabel);
+
 
         frame.pack();
-        frame.setVisible(true);
+
     }
 }

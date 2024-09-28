@@ -3,6 +3,7 @@ package ru.mirea.task5.teortest;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -10,12 +11,13 @@ import javax.swing.*;
 class Chomper {
 
     public static void main(String[] args) throws Exception {
-        final Image[] frames = {
-                ImageIO.read(new URL("https://i.sstatic.net/XUmOD.png")),
-                ImageIO.read(new URL("https://i.sstatic.net/zKyiD.png")),
-                ImageIO.read(new URL("https://i.sstatic.net/4maMm.png")),
-                ImageIO.read(new URL("https://i.sstatic.net/wn9V5.png"))
-        };
+        File folder = new File("/Users/egor/IdeaProjects/JavaFirstMirea/src/ru/mirea/task5/animation/img");
+        File[] files = folder.listFiles();
+        Image[] frames = new Image[files.length];
+        for (int i = 0; i < files.length; i++) {
+            frames[i] = ImageIO.read(files[i]);
+        }
+
         Runnable r = new Runnable() {
 
             @Override
