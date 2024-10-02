@@ -7,6 +7,7 @@ public class OpositeNumberChars {
     private static int num=0;
     private static Scanner scanner = new Scanner(System.in);
     public static int setI(){
+        System.out.println("Введите ваше натуральное число:");
         try {
             num = scanner.nextInt();
             if(num<0) throw new Exception();

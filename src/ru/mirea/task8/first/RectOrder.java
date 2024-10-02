@@ -1,12 +1,13 @@
 package ru.mirea.task8.first;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
+
 
 public class RectOrder {
     private static int num=0;
     private static Scanner scanner = new Scanner(System.in);
     public static int setNum(){
+        System.out.println("Введите натуральным числом кол-во значений, которое требуется вывести необходимо вывести:");
         try {
             num = scanner.nextInt();
             if(num<0) throw new Exception();
@@ -24,12 +25,23 @@ public class RectOrder {
         return num;
     }
     public static void func(int k){
-        for (int i =1;i<=k;i++){
-            System.out.println(i);
+        int count=0;
+        int currentNum = 1;
+        int numCount = 1;
+        for (; count < k;) {
+            if (numCount<=currentNum){
+                System.out.print(currentNum +" ");
+                count++;
+                numCount++;
+            } else {
+                currentNum++;
+                numCount =1;
+            }
         }
+
     }
 
     public static void main(String[] args) {
-
+        func(setNum());
     }
 }
