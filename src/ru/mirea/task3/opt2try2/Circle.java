@@ -29,7 +29,7 @@ public class Circle {
     }
 
     public double getPerimetr(){
-        return Math.PI*this.getR();
+        return Math.PI*r;
     }
 
     @Override
