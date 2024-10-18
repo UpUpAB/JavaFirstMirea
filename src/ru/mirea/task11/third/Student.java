@@ -9,41 +9,45 @@ import java.util.Date;
 имеет свойства: Имя, Фамилия, Специальность, Курс, Группа*/
 public class Student {
     String name;
-    String surname;
+    /*String surname;
     String speciality;
     int course;
     String group;
-    int gpa;
+    int gpa;*/
     SimpleDateFormat shortFormatter = new SimpleDateFormat("d-M-y");
     SimpleDateFormat middleFormatter = new SimpleDateFormat("dd-MM-yyyy");
     SimpleDateFormat longFormatter = new SimpleDateFormat("d MMMM,yyyy");
     Date birthDate;
     String birthDateStr;
 
-
+/*
     public Student(String name, String surname, String speciality, int course, String group) {
         this.name = name;
         this.surname = surname;
         this.speciality = speciality;
         this.course = course;
         this.group = group;
-    }
+    }*/
     public Student(String name, Date birthDate) {
         this.name = name;
         this.birthDate = birthDate;
         setBirthDateStr("middle");
     }
     public void setBirthDateStr(String format){
-        if (format.equals("long")){
-            birthDateStr = longFormatter.format(birthDate);
-        } else if (format.equals("middle")) {
-            birthDateStr = middleFormatter.format(birthDate);
-        } else if (format.equals("short")) {
-            birthDateStr = shortFormatter.format(birthDate);
-        } else {
-            System.out.println("Введённый формат не существует (Попробуйте long/middle/short)");
+        switch (format) {
+            case ("long"):
+                birthDateStr = longFormatter.format(birthDate);
+                break;
+            case ("middle"):
+                birthDateStr = middleFormatter.format(birthDate);
+                break;
+            case ("short"):
+                birthDateStr = shortFormatter.format(birthDate);
+                break;
+            default:
+                System.out.println("Введённый формат не существует (Попробуйте long/middle/short)");
+                break;
         }
-
     }
 
     public String getName() {
@@ -53,7 +57,7 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
+/*
     public String getSurname() {
         return surname;
     }
@@ -93,7 +97,7 @@ public class Student {
     public void setGpa(int gpa) {
         this.gpa = gpa;
     }
-
+*/
     public Date getBirthDate() {
         return birthDate;
     }
@@ -106,11 +110,11 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+               /* ", surname='" + surname + '\'' +
                 ", speciality='" + speciality + '\'' +
                 ", course=" + course +
                 ", group='" + group + '\'' +
-                ", gpa=" + gpa +
+                ", gpa=" + gpa +*/
                 ", birthDate=" + birthDateStr +
                 '}';
     }
@@ -120,6 +124,8 @@ public class Student {
         Student student = new Student("Vova",birth);
         System.out.println(student);
         student.setBirthDateStr("long");
+        System.out.println(student);
+        student.setBirthDateStr("short");
         System.out.println(student);
 
     }
