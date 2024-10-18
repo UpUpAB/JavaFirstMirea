@@ -16,7 +16,6 @@ public class OpositeNumberChars {
             scanner.nextLine();
             return setI();
 
-
         } catch (Exception e){
             System.out.println("Было введено не положительное значение");
             scanner.nextLine();
