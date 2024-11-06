@@ -8,4 +8,4 @@ public class ArgsFounder {
         }
     }
 }
-
+// java ru/mirea/task1/opt5/ArgsFounder

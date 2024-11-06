@@ -9,7 +9,6 @@ public class TestClass{
     List<Student> group= new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
     //вопрос, пишет, что я не могу конвертировать объект в тип comparable, хотя объект расширяет этот же интерфейс
-    //могу ли я вообще так преобразовывать, или смысл задания создать отдельный массив для id
     public void insertion(List<Student> list){
         for (int i =0;i< list.size();i++){
             Student value = list.get(i);

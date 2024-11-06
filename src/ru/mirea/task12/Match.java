@@ -1,10 +1,10 @@
-package ru.mirea.task5.match;
+package ru.mirea.task12;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class Match extends JFrame {
+public class Match extends JPanel {
     private int milanScore = 0;
     private int madridScore = 0;
     private String lastScorer = "N/A";
@@ -14,11 +14,10 @@ public class Match extends JFrame {
 
 
     public Match() {
-        setTitle("Milan vs Madrid Match");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         setSize(600, 200);
         setLayout(new GridLayout(2, 3, 10, 10));
-        setLocationRelativeTo(null);
+
 
 
         // Кнопка "AC Milan"
@@ -82,7 +81,7 @@ public class Match extends JFrame {
         add(resultLabel);
         add(lastScorerLabel);
         add(winnerLabel);
-        setVisible(true);
+
     }
 
     private void updateResults(String scorer) {
@@ -109,8 +108,5 @@ public class Match extends JFrame {
         }
     }
 
-    public static void main(String[] args) {
-            Match frame = new Match();
 
-    }
 }
