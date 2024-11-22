@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Combine extends JFrame {
+public class Combine {
     JFrame frame = new JFrame("Combine");
 
 

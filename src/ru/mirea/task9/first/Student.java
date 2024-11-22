@@ -1,5 +1,7 @@
 package ru.mirea.task9.first;
 
+import ru.mirea.task19.second.EmptyStringExeption;
+
 public class Student implements Comparable<Student>{
     private String name;
     private int iDNumber;
