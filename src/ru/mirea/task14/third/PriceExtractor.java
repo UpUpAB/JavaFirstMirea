@@ -9,6 +9,7 @@ public class PriceExtractor {
 
         String regex = "\\b\\d+(\\.\\d+)?\\s*(USD|RUB|EUR)\\b";
 
+
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
 

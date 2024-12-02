@@ -17,7 +17,7 @@ class StringList {
     public void add(String data) {
         NodeStr newNode = new NodeStr(data);
 
-        // Если список пуст, добавляем новый узел
+
         if (head == null) {
             head = newNode;
             head.next = head;

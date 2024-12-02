@@ -23,6 +23,5 @@ public class MonotonicSequence {
             }
         }
 
-        scanner.close();
     }
 }

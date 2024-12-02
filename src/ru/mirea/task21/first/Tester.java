@@ -1,4 +1,4 @@
-package ru.mirea.task17.nodeFirst;
+package ru.mirea.task21.first;
 
 class NoSuchElementException extends RuntimeException{
     public NoSuchElementException(String message) {
@@ -23,7 +23,7 @@ class ListElement<E> {
     }
 }
 
-class List<E> {
+class List<E extends Number> {
     private ListElement<E> head;
     private ListElement<E> tail;
     private int listCount = 0;
@@ -38,7 +38,6 @@ class List<E> {
             temp.prev = tail;
             tail.next = temp;
             tail = temp;
-
         }
         listCount++;
     }
@@ -49,6 +48,12 @@ class List<E> {
             temp = temp.next;
         }
         System.out.print("\n");
+    }
+    void addM(E[] data){
+        for (int i =0;i<data.length;i++){
+            add(data[i]);
+
+        }
     }
 
     void deliteAll(E data)
@@ -102,8 +107,6 @@ class List<E> {
     }
 
     Object dataAt(int index){
-
-
         if (index < 0 || index >= listCount) throw new NoSuchElementException();
         ListElement<E> current = head;
         for (int i = 0; i < index; i++){
@@ -129,7 +132,7 @@ class List<E> {
         ListElement<E> temp = head;
         String output = "";
         while (temp != null){
-            output += temp.data + " ";
+            output = output + temp.data + " ";
             temp = temp.next;
         }
         System.out.print("\n");
@@ -140,23 +143,13 @@ class List<E> {
 public class Tester {
     public static void main(String[] args) {
         List list = new List();
-        list.add(1);
-        list.add(2);
-        list.printList();
-        System.out.println(list.isListEmpty());
-        list.listClear();
-        System.out.println(list.isListEmpty());
-        list.add("asd");
-        list.add("qwe");
-        list.add("1");
-        list.add("2");
-        list.add("asd");
-        list.printList();
-        list.deliteAll("asd");
-        list.printList();
-        list.delite(3);
+        Integer[] m = {1,2,3,4};
+        list.add(6);
+        list.add(7);
+        list.addM(m);
+
 
         list.printList();
-        System.out.print(list.dataAt(2));
+        System.out.println(list);
     }
 }

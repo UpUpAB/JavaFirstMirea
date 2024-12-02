@@ -10,7 +10,6 @@ import java.util.Arrays;
 
 
 public class Animation extends JPanel {
-    JFrame frame;
     JLabel animation;
     File folder;
     File[] files;
