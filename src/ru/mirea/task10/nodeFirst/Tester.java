@@ -1,4 +1,4 @@
-package ru.mirea.task17.nodeFirst;
+package ru.mirea.task10.nodeFirst;
 
 class NoSuchElementException extends RuntimeException{
     public NoSuchElementException(String message) {
